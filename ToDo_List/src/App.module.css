@@ -1,0 +1,11 @@
+.wrapper {
+  max-width: 70rem;
+  margin: auto;
+  padding: 0 9rem;
+
+  display: flex;
+  flex-direction: center;
+  justify-content: center;
+  align-items: center;
+  background: color(--gray-300-);
+}
