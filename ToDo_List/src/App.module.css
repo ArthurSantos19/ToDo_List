@@ -1,6 +1,9 @@
 .wrapper {
   max-width: 70rem;
-  margin: auto;
+  /* margin: auto; */
+  margin-top: -18px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 0 9rem;
 
   display: flex;
