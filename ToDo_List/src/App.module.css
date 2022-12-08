@@ -7,8 +7,15 @@
   padding: 0 9rem;
 
   display: flex;
-  flex-direction: center;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   background: color(--gray-300-);
 }
+
+.divlIf {
+  margin-top: 100px;
+  margin-left: 40px;
+}
+
+
