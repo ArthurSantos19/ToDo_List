@@ -2,7 +2,7 @@
   /* position: absolute; */
   
   margin: 0px;
-  height: 12rem;
+  height: 8rem;
   left: 0px;
   right: 0px;
   top: 0px;
@@ -12,5 +12,5 @@
 }
 
 .header img {
-  width: 10rem;
+  width: 8rem;
 }

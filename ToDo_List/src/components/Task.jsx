@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { ListForm } from './ListForm'
 import styles from './Task.module.css'
 import { Centerbar } from './Centerbar'
+import {TiPlus} from "react-icons/ti"
 
 
 export function Task({ taskHandler }) {
@@ -25,7 +26,7 @@ export function Task({ taskHandler }) {
             placeholder='Crie uma tarefa' onChange={(e) => setText(e.target.value)}
           
           />
-          <button text={text} onClick={() =>taskCreate(text)}>Criar</button>
+          <button text={text} onClick={() =>taskCreate(text)}>Criar <TiPlus/> </button>
         </div>
         
         <ul className={styles.taskI}>
