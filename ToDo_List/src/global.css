@@ -13,7 +13,7 @@
 
 :focus {
   outline: transparent;
-  box-shadow: 0 1px var(--gray-100);
+  
 }
 
 * {

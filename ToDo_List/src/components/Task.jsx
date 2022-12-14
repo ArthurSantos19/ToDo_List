@@ -34,7 +34,7 @@ export function Task({ taskHandler }) {
             <li>Tarefas criadas <span> 0</span></li>
           </ul>
           <ul>
-            <li>Concluídas 0</li>
+            <li>Concluídas <span> 0</span></li>
           </ul>
         </ul>
         
