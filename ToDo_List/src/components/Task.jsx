@@ -5,7 +5,7 @@ import { Centerbar } from './Centerbar'
 import {TiPlus} from "react-icons/ti"
 
 
-export function Task({ taskHandler }) {
+export function Task({ taskHandler, task }) {
 
   const [text, setText] = useState('')
   const [id, setId] = useState(0)
@@ -14,6 +14,7 @@ export function Task({ taskHandler }) {
     const obj = {text: text, id: id}
     setId(id + 1)
     taskHandler(obj)
+    document.getElementById('input').value = null
   }
   
 
@@ -22,7 +23,7 @@ export function Task({ taskHandler }) {
       
       <div className={styles.form}>
         <div className={styles.campos}>
-          <input className={styles.input}
+          <input id='input' className={styles.input}
             placeholder='Crie uma tarefa' onChange={(e) => setText(e.target.value)}
           
           />
@@ -31,7 +32,7 @@ export function Task({ taskHandler }) {
         
         <ul className={styles.taskI}>
           <ul>
-            <li>Tarefas criadas <span> 0</span></li>
+            <li>Tarefas criadas <span></span></li>
           </ul>
           <ul>
             <li>Concluídas <span> 0</span></li>

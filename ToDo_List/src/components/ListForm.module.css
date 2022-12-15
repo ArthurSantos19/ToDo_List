@@ -74,10 +74,29 @@ textarea {
 
 .delete {
   margin-left: 155px;
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
 
   border-radius: 4px;
   cursor: pointer;
   color: #262626;
-} 
+}
+
+.check {
+  
+
+}
+
+/* .listForm input + textarea:before {
+  content: '';
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  background-color: white;
+  display: inlie-block;
+} */
+
+input:checked + textarea {
+  text-decoration: line-through;
+  color: gray;
+}

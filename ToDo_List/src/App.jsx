@@ -12,6 +12,7 @@ export function App() {
 
   const taskHandler = (task) => {
     setTasks([...tasks, task])
+    console.log(tasks)
     
   }
 
