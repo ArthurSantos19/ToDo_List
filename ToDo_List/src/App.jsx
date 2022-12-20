@@ -12,8 +12,7 @@ export function App() {
 
   const taskHandler = (task) => {
     setTasks([...tasks, task])
-    console.log(tasks)
-    
+    console.log(tasks.length)
   }
 
   function deleteTask(id) {
@@ -26,7 +25,7 @@ export function App() {
     <div>
       <Header/>
       <div className={styles.wrapper}>
-        <Task taskHandler={taskHandler}/>
+        <Task tasks={tasks} taskHandler={taskHandler}/>
           <div className={styles.divlIf}>
             {tasks.map((task) => {
               return <ListForm deleteTask={deleteTask} task={task}/>   
