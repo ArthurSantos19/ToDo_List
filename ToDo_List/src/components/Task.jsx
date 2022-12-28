@@ -3,9 +3,10 @@ import { ListForm } from './ListForm'
 import styles from './Task.module.css'
 import { Centerbar } from './Centerbar'
 import {TiPlus} from "react-icons/ti"
+import any from '../assets/Clipboard.png'
 
 
-export function Task({ taskHandler, tasks }) {
+export function Task({ taskHandler, tasks, checks }) {
 
   const [text, setText] = useState('')
   const [id, setId] = useState(0)
@@ -16,12 +17,6 @@ export function Task({ taskHandler, tasks }) {
     taskHandler(obj)
     document.getElementById('input').value = null
   }
-
-  const numTask = () => {
-    let num = tasks.length
-    return num
-  }
-  
 
   return(
     <>
@@ -41,9 +36,16 @@ export function Task({ taskHandler, tasks }) {
             <li>Tarefas criadas <span>{tasks.length}</span></li>
           </ul>
           <ul>
-            <li>Concluídas <span> 0</span></li>
+            <li>Concluídas <span> {checks} de {tasks.length}</span></li>
           </ul>
         </ul>
+        {!tasks.length && (
+          <div className={styles.card}>
+            <img src={any} alt='clipboard' />
+            <p>Você ainda não tem tarefas cadastradas</p>
+            <p>Crie tarefas e organize seus itens a fazer</p>
+          </div>
+        )}
         
       </div>
       

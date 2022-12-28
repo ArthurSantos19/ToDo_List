@@ -12,7 +12,20 @@ export function App() {
 
   const taskHandler = (task) => {
     setTasks([...tasks, task])
-    console.log(tasks.length)
+  }
+
+  const [checks, setChecks] = useState(0)
+  const check = () => {
+    let checkbox = document.getElementById('check')
+    if(checkbox.checked) {
+     
+     setChecks(checks + 1)
+     console.log(checks)
+    }
+    if(checkbox.checked == false) {
+      console.log('false')
+      setChecks(checks - 1)
+    }
   }
 
   function deleteTask(id) {
@@ -25,10 +38,10 @@ export function App() {
     <div>
       <Header/>
       <div className={styles.wrapper}>
-        <Task tasks={tasks} taskHandler={taskHandler}/>
+        <Task tasks={tasks} checks={checks} taskHandler={taskHandler}/>
           <div className={styles.divlIf}>
             {tasks.map((task) => {
-              return <ListForm deleteTask={deleteTask} task={task}/>   
+              return <ListForm deleteTask={deleteTask} check={check} tasks={tasks} task={task}/>   
             })}
           </div>
          

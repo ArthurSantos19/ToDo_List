@@ -121,8 +121,32 @@ li {
 span {
   background: var(--gray-400);
   color: white;
-  width:24px;
+  width:28px;
   height:19px;
   padding: 2px 8px;
   border-radius: 999px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  margin-left: 9rem;
+  margin-top: 5rem;
+  text-align: center;
+}
+
+img {
+  height: 7rem;
+  width: 7rem;
+  margin-left: 10rem;
+  margin-bottom: 1rem;
+}
+
+.card p {
+  margin-left:4rem;
+  
+}
+
+p {
+  font-size: 20px;
 }
